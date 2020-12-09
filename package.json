@@ -1,0 +1,26 @@
+{
+  "name": "oa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon ./app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-body": "^4.2.0",
+    "koa-helmet": "^6.0.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.3.0",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
+  },
+  "devDependencies": {
+    "console-color-mr": "^2.0.1"
+  }
+}
