@@ -7,7 +7,11 @@ const pool = mysql.createPool({
     host: dbConfig.databases.host,
     user: dbConfig.databases.user,
     password: dbConfig.databases.password,
-    database: dbConfig.databases.database
+    database: dbConfig.databases.database,
+    connecTimeout: dbConfig.databases.connecTimeout,
+  	multipleStatements: dbConfig.databases.multipleStatements,
+  	connectionLimit: dbConfig.databases.connectionLimit,
+  	queueLimit: dbConfig.databases.queueLimit,
 });
 
 let query = function( sql, values ) {
@@ -23,17 +27,22 @@ let query = function( sql, values ) {
           connection.query(sql, values, ( err, rows) => {
             logsUtil.logHandle(sql,values) //保存所有操作的sql
             if ( err ) {
+              console.log('查询数据失败');  
               reject( err )
             } else {
+              // console.log(rows);
               resolve( rows )
             }
             // 结束会话
-            connection.release()
+            connection.release();
+            
           })
         }
+        console.log(pool._freeConnections.indexOf(connection))  //查看数据库资源
       })
     })
   }
+
 
 module.exports = query;
 

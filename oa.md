@@ -15,6 +15,7 @@
 ├── config.js 全文配置
     ├── log.js 配置文件方法
     ├── logs.js  放置输出日志的工具方法
+    ├── md5.js  放置加密
 ├── nodemon.josn --nodemon 服务器启动配置
 
 
@@ -51,6 +52,7 @@ npm run dev   //自动启动服务器
 ├── npm i koa-body -S 安装 获取post请求过来的值 支持文件上传
 ├── npm install koa-json 字符串转换
 ├── npm install moment --save 时间插件  http://momentjs.cn/
+ ├── console.log(Moment().format('YYYY-MM-DD HH:mm:ss'));
 ├── npm install koa-helmet --save 提高网站安全  https://blog.csdn.net/weixin_34367257/article/details/88029619
     ├──app.use(helmet.contentSecurityPolicy());  //单独来设置 Http 头
     ├──app.use(helmet.dnsPrefetchControl());  //dnsPrefetchControl通过将X-DNS-Prefetch-Control设置为off禁止浏览器进行DNS预解析。
@@ -65,7 +67,7 @@ npm run dev   //自动启动服务器
     ├──app.use(helmet.referrerPolicy());
     ├──app.use(helmet.xssFilter()); //设置X-XSS-Protection提供基本的XSS防护，避免基本的反射性XSS攻击。
 ├── npm i koa2-cors --save 跨域
-   ├── console.log(Moment().format('YYYY-MM-DD HH:mm:ss'));
+   
 ├── npm i nodemon -g  nodejs开发辅助工具\color{red}{nodemon}  服务器自动重新部署
    ├── nodemon app 命令代替 node app
  

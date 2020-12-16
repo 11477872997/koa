@@ -40,7 +40,7 @@ let errorLogPath = baselogPath + errorPath + '/' + errorFileName;
                 "pattern": "-yyyy年-MM月-dd日-hh时.log",   //滚动日志的时间类型，默认为 .yyyy-MM-dd
                 "alwaysIncludePattern": true,   //在当前日志文件名中和滚动日志一样包括pattern
                 "encoding": "utf-8",
-                "maxLogSize": 1000,   //日志文件的最大大小(以字节为单位),如果未指定，则不会发生日志滚动
+                "maxLogSize": 52428800,   //日志文件的最大大小(以字节为单位),如果未指定，则不会发生日志滚动
                 "numBackups": 3,      
                 "path": errorPath,
                 compress:true
@@ -51,7 +51,7 @@ let errorLogPath = baselogPath + errorPath + '/' + errorFileName;
                 "pattern": "-yyyy年-MM月-dd日-hh时.log",
                 "alwaysIncludePattern": true,
                 "encoding": "utf-8",
-                "maxLogSize": 1000,
+                "maxLogSize": 52428800,
                 "numBackups": 3,
                 "path": responsePath,
                 compress:true
@@ -62,7 +62,7 @@ let errorLogPath = baselogPath + errorPath + '/' + errorFileName;
                 "pattern": "-yyyy年-MM月-dd日-hh时.log",
                 "alwaysIncludePattern": true,
                 "encoding": "utf-8",
-                "maxLogSize": 1000,
+                "maxLogSize": 52428800,
                 "numBackups": 3,
                 "path": responsePath,
                 compress:true    
